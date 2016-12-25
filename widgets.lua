@@ -10,7 +10,7 @@ function add_widgets(screen, beautiful)
 
 -- Textclock
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
-mytextclock = awful.widget.textclock(" %a %d %b  %H:%M")
+mytextclock = awful.widget.textclock(" %a %d %b %H:%M:%S", 5)
 
 -- Separators
 spr = wibox.widget.textbox(' ')
