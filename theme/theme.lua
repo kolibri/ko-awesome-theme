@@ -74,7 +74,7 @@ theme.tasklist_floating             = ""
 theme.tasklist_maximized_horizontal = ""
 theme.tasklist_maximized_vertical   = ""
 
-theme.touchpad_status_script = os.getenv("HOME") .. "/bin/touchpad_status.sh"
-theme.touchpad_toggle_script = os.getenv("HOME") .. "/bin/touchpad_toggle.sh"
+theme.touchpad_status_script = "/usr/local/bin/touchpad_toggle.sh/touchpad_status.sh"
+theme.touchpad_toggle_script = "/usr/local/bin/touchpad_toggle.sh/touchpad_toggle.sh"
 
 return theme
