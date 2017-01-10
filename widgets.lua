@@ -113,6 +113,7 @@ for s = 1, screen.count() do
     right_bar_top:add(ko_widgets.volume())
     right_bar_top:add(ko_widgets.temperature())
     right_bar_top:add(ko_widgets.touchpad())
+    right_bar_top:add(ko_widgets.screen_brightness())
 
     right_bar:set_top(right_bar_top)
 
