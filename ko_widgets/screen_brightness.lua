@@ -1,6 +1,8 @@
 local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
+local awful     = require("awful")
+awful.util     = require("awful.util")
 
 local screen_brightness = {}
 
@@ -47,6 +49,17 @@ local function worker(args)
 	icon_timer:connect_signal("timeout", update_icon)
 	icon_timer:start()
 	widget:add(icon)
+
+	widget:buttons (awful.util.table.join (
+	        awful.button ({}, 1, function()
+	            awful.util.spawn ("sudo su - root -c 'tee /sys/class/backlight/acpi_video0/brightness <<< 15'")
+	            update_icon()
+	        end),
+	        awful.button ({}, 3, function()
+	            awful.util.spawn ("sudo su - root -c 'tee /sys/class/backlight/acpi_video0/brightness <<< 0'")
+	            update_icon()
+	        end)
+	    ))
 
     return widget
 end
