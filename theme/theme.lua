@@ -41,6 +41,8 @@ theme.layout_floating               = themes_dir .. "/icons/floating.png"
 theme.layout_max                    = themes_dir .. "/icons/max.png"
 theme.layout_tile                   = themes_dir .. "/icons/tile.png"
 theme.layout_tilebottom             = themes_dir .. "/icons/tilebottom.png"
+theme.layout_spiral                 = themes_dir .. "/icons/spiral.png"
+theme.layout_dwindle                = themes_dir .. "/icons/spiraldwindle.png"
 
 -- widget icons
 theme.widget_ac                     = themes_dir .. "/icons/ac.png"

@@ -63,6 +63,9 @@ awful.layout.layouts = {
      awful.layout.suit.tile.bottom,
      awful.layout.suit.fair,
      awful.layout.suit.fair.horizontal,
+     awful.layout.suit.spiral,
+     awful.layout.suit.spiral.dwindle,
+ 
 --+    awful.layout.suit.corner.nw,
     awful.layout.suit.max
 }
@@ -221,13 +224,13 @@ awful.screen.connect_for_each_screen(function(s)
         {
           layout = wibox.layout.flex.vertical,
 
-          net_widgets.wireless({interface="wlp3s0", command_mode="newer"}),
-          ko_widgets.battery(),
-          ko_widgets.acplug(),
+          -- net_widgets.wireless({interface="wlp3s0", command_mode="newer"}),
+          -- ko_widgets.battery(),
+          -- ko_widgets.acplug(),
           ko_widgets.volume(),
           ko_widgets.temperature(),
-          ko_widgets.touchpad(),
-          ko_widgets.screen_brightness()
+          -- ko_widgets.touchpad(),
+          -- ko_widgets.screen_brightness()
         }
     }
 
@@ -421,7 +424,9 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "toggle focused client on tag #" .. i, group = "tag"}),
+        awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 1+") end),
+        awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 1-") end)
     )
 end
 
