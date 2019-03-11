@@ -5,7 +5,7 @@ theme                               = {}
 
 themes_dir                          = os.getenv("HOME") .. "/.config/awesome/theme"
 
-theme.font                          = "Terminus 9"
+theme.font                          = "DejaVu Sans Mono 8"
 theme.fg_normal                     = "#000000"
 theme.fg_focus                      = "#F0DFAF"
 theme.fg_urgent                     = "#CC9393"

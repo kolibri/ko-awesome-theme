@@ -10,6 +10,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+local cairo = require("lgi").cairo
+
 
 local ko_widgets = require("ko_widgets")
 local net_widgets = require("net_widgets")
@@ -218,6 +220,21 @@ awful.screen.connect_for_each_screen(function(s)
         },
     }
 
+    local cr = cairo.Context()
+    cr:clip()
+
+    s.leftBar = awful.wibar({ position = "left", screen = s, width = 254, shape = gears.shape.rectangle(cr, 51,100), bg = 'none' })
+    s.leftBar:setup {
+        layout = wibox.layout.align.vertical,
+        {
+          spacing = 10,
+
+          layout = wibox.layout.fixed.vertical,
+          ko_widgets.temperature_right(),
+          ko_widgets.volume_right()
+        }
+    }
+
     s.rightBar = awful.wibar({ position = "right", screen = s, width = 18 })
     s.rightBar:setup {
         layout = wibox.layout.align.vertical,
@@ -228,7 +245,7 @@ awful.screen.connect_for_each_screen(function(s)
           -- ko_widgets.battery(),
           -- ko_widgets.acplug(),
           ko_widgets.volume(),
-          ko_widgets.temperature(),
+          -- ko_widgets.temperature(),
           -- ko_widgets.touchpad(),
           -- ko_widgets.screen_brightness()
         }
