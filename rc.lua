@@ -231,7 +231,8 @@ awful.screen.connect_for_each_screen(function(s)
 
           layout = wibox.layout.fixed.vertical,
           ko_widgets.temperature_right(),
-          ko_widgets.volume_right()
+          ko_widgets.volume_right(),
+          ko_widgets.hdd_right()
         }
     }
 

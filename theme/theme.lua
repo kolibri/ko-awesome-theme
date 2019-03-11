@@ -35,14 +35,14 @@ theme.menu_width                    = "140"
 theme.wallpaper                     = themes_dir .. "/ko_bg.png" 
 
 -- layout icons
-theme.layout_fairh                  = themes_dir .. "/icons/fairh.png"
-theme.layout_fairv                  = themes_dir .. "/icons/fairv.png"
-theme.layout_floating               = themes_dir .. "/icons/floating.png"
-theme.layout_max                    = themes_dir .. "/icons/max.png"
-theme.layout_tile                   = themes_dir .. "/icons/tile.png"
-theme.layout_tilebottom             = themes_dir .. "/icons/tilebottom.png"
-theme.layout_spiral                 = themes_dir .. "/icons/spiral.png"
-theme.layout_dwindle                = themes_dir .. "/icons/spiraldwindle.png"
+theme.layout_fairh                  = themes_dir .. "/icons/_fairh.png"
+theme.layout_fairv                  = themes_dir .. "/icons/_fairv.png"
+theme.layout_floating               = themes_dir .. "/icons/_floating.png"
+theme.layout_max                    = themes_dir .. "/icons/_max.png"
+theme.layout_tile                   = themes_dir .. "/icons/_tile.png"
+theme.layout_tilebottom             = themes_dir .. "/icons/_tilebottom.png"
+theme.layout_spiral                 = themes_dir .. "/icons/_spiral.png"
+theme.layout_dwindle                = themes_dir .. "/icons/_spiraldwindle.png"
 
 -- widget icons
 theme.widget_ac                     = themes_dir .. "/icons/ac.png"

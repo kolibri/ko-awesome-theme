@@ -10,7 +10,8 @@ local ko_widgets = {
     touchpad          = require(module_path .. "ko_widgets.touchpad"),
     screen_brightness = require(module_path .. "ko_widgets.screen_brightness"),
     temperature_right = require(module_path .. "ko_widgets.temperature_right"),
-    volume_right      = require(module_path .. "ko_widgets.volume_right")
+    volume_right      = require(module_path .. "ko_widgets.volume_right"),
+    hdd_right      = require(module_path .. "ko_widgets.hdd_right")
 }
 
 return ko_widgets
