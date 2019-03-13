@@ -11,7 +11,8 @@ local ko_widgets = {
     screen_brightness = require(module_path .. "ko_widgets.screen_brightness"),
     temperature_right = require(module_path .. "ko_widgets.temperature_right"),
     volume_right      = require(module_path .. "ko_widgets.volume_right"),
-    hdd_right      = require(module_path .. "ko_widgets.hdd_right")
+    hdd_right      = require(module_path .. "ko_widgets.hdd_right"),
+    cpu_right      = require(module_path .. "ko_widgets.cpu_right")
 }
 
 return ko_widgets
