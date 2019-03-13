@@ -4,7 +4,6 @@
 theme                               = {}
 
 themes_dir                          = os.getenv("HOME") .. "/.config/awesome/theme"
-
 theme.font                          = "DejaVu Sans Mono 8"
 theme.fg_normal                     = "#000000"
 theme.fg_focus                      = "#F0DFAF"
@@ -35,6 +34,9 @@ theme.menu_width                    = "140"
 theme.wallpaper                     = themes_dir .. "/ko_bg.png" 
 
 -- layout icons
+theme.ko_icon	     				= themes_dir .. "/icons/_ko.png"
+theme.tag = themes_dir .. "/icons/_tag.png"
+
 theme.layout_fairh                  = themes_dir .. "/icons/_fairh.png"
 theme.layout_fairv                  = themes_dir .. "/icons/_fairv.png"
 theme.layout_floating               = themes_dir .. "/icons/_floating.png"

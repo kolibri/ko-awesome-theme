@@ -91,20 +91,23 @@ end
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-   { "hotkeys", function() return false, hotkeys_popup.show_help end},
+   { "hotkeys", function() return false, hotkeys_popup.show_help end },
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end}
+   { "quit", function() awesome.quit() end }
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.ko_icon },
+                                    { "terminal", terminal },
+                                    { "chromium", 'chromium' },
+                                    { "subl", 'subl' }
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+mylauncher = awful.widget.launcher({ image = beautiful.ko_icon,
                                      menu = mymainmenu })
+mytestlauncher = awful.widget.launcher( {"terminal", terminal})
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -180,7 +183,8 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+     awful.tag({ " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9" }, s, awful.layout.layouts[1])
+
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -206,8 +210,9 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
             s.mytaglist,
+            mylauncher,
+            mytestlauncher,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
