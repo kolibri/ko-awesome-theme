@@ -228,19 +228,19 @@ awful.screen.connect_for_each_screen(function(s)
     local cr = cairo.Context()
     cr:clip()
 
-    s.leftBar = awful.wibar({ position = "left", screen = s, width = 254, shape = gears.shape.rectangle(cr, 51,100), bg = 'none' })
-    s.leftBar:setup {
-        layout = wibox.layout.align.vertical,
-        {
-          spacing = 10,
-
-          layout = wibox.layout.fixed.vertical,
-          ko_widgets.temperature_right(),
-          ko_widgets.cpu_right(),
-          --ko_widgets.volume_right(),
-          ko_widgets.hdd_right()
-        }
-    }
+--    s.leftBar = awful.wibar({ position = "left", screen = s, width = 254, shape = gears.shape.rectangle(cr, 51,100), bg = 'none' })
+--    s.leftBar:setup {
+--        layout = wibox.layout.align.vertical,
+--        {
+--          spacing = 10,
+--
+--          layout = wibox.layout.fixed.vertical,
+--          ko_widgets.temperature_right(),
+--          ko_widgets.cpu_right(),
+--          --ko_widgets.volume_right(),
+--          ko_widgets.hdd_right()
+--        }
+--    }
 
     s.rightBar = awful.wibar({ position = "right", screen = s, width = 18 })
     s.rightBar:setup {
